@@ -1,0 +1,126 @@
+@use './../helpers/variables.scss' as *;
+@use './../helpers/mixins.scss' as *;
+
+%main-a {
+  display: block;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  color: $orange_color;
+  padding: 5px 15px;
+  border-radius: 10px;
+  transition: $main_transition;
+  position: relative;
+  overflow: hidden;
+  &:not(:last-child) {
+    margin-left: 8px;
+  }
+  @include maxSmall {
+    font-size: 14px;
+    padding: 5px 15px;
+    &:not(:last-child) {
+      margin-left: 10px;
+    }
+  }
+  @include maxMobile {
+    padding: 5px 15px;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: -1;
+    transition: $main_transition;
+  }
+  &::before {
+    background-color: $orange_color;
+    width: 0;
+  }
+  &:hover {
+    color: white;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  &:hover::after {
+    width: 0;
+  }
+}
+%b-animation {
+  transition: $main_transition;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 0;
+    border-radius: 6px;
+    background-color: $orange_color;
+    transition: $main_transition;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
+.s-title {
+  font-size: 45px;
+  font-weight: 900;
+  text-align: center;
+  color: black;
+  padding: 5px 10px;
+  @include maxMobile {
+    & {
+      font-size: 35px;
+    }
+  }
+  .bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: $orange_color;
+      @include maxMobile {
+        & {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+.spikes {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    background-image: linear-gradient(135deg, #ddd 25%, transparent 25%),
+      linear-gradient(225deg, #ddd 25%, transparent 25%);
+    background-size: 50px 50px;
+  }
+  &.bottom {
+    &::after {
+          background-image: linear-gradient(135deg, #EE562299 25%, transparent 25%),
+      linear-gradient(225deg, #EE562299 25%, transparent 25%);
+    }
+  }
+}

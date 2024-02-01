@@ -1,0 +1,62 @@
+@use './SASS/helpers/variables.scss';
+@use './SASS/helpers/mixins.scss';
+@use './SASS/componants/header.scss';
+@use './SASS/pages/questions.scss';
+@use './SASS/pages/mainpage.scss';
+@use './SASS/pages/result.scss';
+@use './SASS/pages/demopage.scss';
+@use './SASS/pages/resultsDB.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  user-select: none;
+  background-color: #eee;
+  &.test {
+    background-color: #ccc;
+    position: relative;
+  }
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+// .page-bg {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+//   overflow: hidden;
+//   img {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     min-width: 100%;
+//     min-height: 100%;
+//   }
+// }
+

@@ -1,0 +1,52 @@
+$purple_color: #44355B; // main
+$alt_purple_color: #31263E; //main
+$black_color: #221E22; // main
+$yellow_color: #ECA72C; // main
+$orange_color: #EE5622; // main
+$red_color: #fc0201;
+$green_color: #56c553;
+$blue_color: #337ab7;
+$main_padding: 100px;
+$main_transition: 0.4s;
+$main-font: 'Rubik', sans-serif;;
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $blue_color;
+  border-radius: 5px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::placeholder {
+  transition: $main_transition;
+  font-size: 16px;
+  opacity: 0.6;
+}
+*:focus::placeholder {
+  opacity: 0;
+}
+*:focus {
+  outline: none;
+}
+input {
+  border: none;
+  font-family: 'Cairo', sans-serif;
+}
+textarea {
+  border: none;
+  resize: none;
+  font-family: 'Cairo', sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}

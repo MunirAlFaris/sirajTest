@@ -1,0 +1,187 @@
+@use "./../helpers/variables.scss" as*;
+@use "./../helpers/mixins.scss" as*;
+
+.ad {
+  padding: 20px;
+  padding-top: 50px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    .box {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid $blue_color;
+      box-shadow: 0 0 5px transparent;
+      animation: up-down 1s alternate infinite;
+      position: relative;
+      z-index: 3;
+      h3 {
+        text-align: center;
+        font-size: 26px;
+        color: $blue_color;
+        @include minMobile {
+          font-size: 30px;
+        }
+      }
+      img {
+        position: absolute;
+        opacity: 0.2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        width: 300px;
+        z-index: -1;
+        @include minMobile {
+          width: 400px;
+        }
+      }
+      .card {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px 0 10px;
+        .title {
+          color: $red_color;
+          font-size: 20px;
+          font-weight: bold;
+          padding-bottom: 10px;
+          @include minMobile {
+            font-size: 26px;
+          }
+        }
+        span:not(.title) {
+          padding-bottom: 10px;
+          font-size: 16px;
+          line-height: 1.5;
+          @include minMobile {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+.exams {
+  padding: 20px;
+  padding-top: 50px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include minMobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .box {
+      transition: $main_transition;
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 3px black;
+      border: 1px solid $red_color;
+      transition: $main_transition;
+      h3 {
+        transition: $main_transition;
+        font-size: 24px;
+        text-align: center;
+        color: $red_color;
+        padding-bottom: 15px;
+        @include minMobile {
+          font-size: 30px;
+        }
+      }
+      .b-body {
+        transition: $main_transition;
+        border-top: 1px solid $red_color;
+        border-bottom: 1px solid $red_color;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+        font-size: 18px;
+        line-height: 1.5;
+        @include minMobile {
+          font-size: 24px;
+        }
+        span {
+          b {
+            font-weight: 600;
+          }
+          &.wait {
+            color: $orange_color;
+          }
+          &.in-prog {
+            color: green;
+          }
+          &.done {
+            color: $red_color;
+          }
+        }
+      }
+      .b-foot {
+        padding: 15px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > span {
+          font-size: 15px;
+          @include minMobile {
+            font-size: 18px;
+          }
+        }
+        a {
+          display: none;
+          color: white;
+          background-color: $red_color;
+          padding: 5px 20px;
+          border-radius: 10px;
+          font-weight: bold;
+          font-size: 16px;
+          transition: $main_transition;
+          @include minMobile {
+            font-size: 20px;
+          }
+          &.done {
+            background-color: $green_color;
+            pointer-events: none;
+          }
+        }
+      }
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 7px black;
+        border-color: $blue_color;
+        h3 {
+          color: $blue_color;
+        }
+        .b-body {
+          border-top-color: $blue_color;
+          border-bottom-color: $blue_color;
+        }
+        a {
+          background-color: $blue_color;
+        }
+      }
+    }
+  }
+}
+
+@keyframes up-down {
+  0% {
+    box-shadow:0 0 5px transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px $blue_color;
+  }
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,52 @@
+@use './../helpers/variables.scss' as*;
+@use './../helpers/mixins.scss' as *;
+
+.subjects {
+  padding-top: 30px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+      font-size: 26px;
+      color: $blue_color;
+      background-color: white;
+      width: 100%;
+      padding: 15px 0;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px black;
+      text-align: center;
+      @include minMobile {
+        font-size: 30px;
+      }
+    }
+    ul {
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 3px $blue_color;
+      li {
+        &:not(:last-child) {
+          border-bottom: 1px solid #ddd;
+        }
+        a {
+          display: block;
+          width: 100%;
+          padding: 20px;
+          transition: $main_transition;
+          color: $blue_color;
+          font-size: 24px;
+          font-weight: bold;
+          &:hover {
+            background-color: $blue_color;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

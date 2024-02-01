@@ -1,0 +1,60 @@
+@use './../helpers/variables.scss'  as*;
+@use './../helpers/mixins.scss' as*;
+
+.demo-data {
+  padding: 30px;
+  padding-top: 50px;
+  .container {
+    .box {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 10px $blue_color;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: $main_transition;
+      animation: pop 1s alternate forwards;
+      i {
+        color: $green_color;
+        font-size: 80px;
+        padding-bottom: 15px;
+      }
+      .info {
+        text-align: center;
+        font-size: 22px;
+        @include minMobile {
+          font-size: 26px;
+        }
+        p {
+          line-height: 2;
+        }
+      }
+      a {
+        color: white;
+        background-color: $red_color;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: $main_transition;
+        margin-top: 20px;
+        @include minMobile {
+          font-size: 20px;
+        }
+      }
+      .counter {
+        padding-top:  15px;
+        font-size: 18px;
+        @include minMobile {
+          font-size: 22px;
+        }
+        > span {
+          color: $red_color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
