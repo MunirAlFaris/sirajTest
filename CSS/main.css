@@ -925,9 +925,15 @@ span.text {
   display: -ms-flexbox;
   display: flex;
   direction: ltr;
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .eq-ans {
+    font-size: 24px;
+  }
 }
 .eq-ans i {
-  padding: 0 2px;
+  padding: 0 0px;
 }
 @media (max-width: 767px) {
   .eq-ans {
@@ -949,9 +955,6 @@ span.text {
     -ms-flex-preferred-size: content !important;
         flex-basis: content !important;
   }
-}
-.eq-ans .kasir span {
-  font-size: 14px;
 }
 
 .eq-sign {
@@ -1761,6 +1764,12 @@ sup {
   left: 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.i-b {
+  direction: ltr;
+  display: inline-block;
+  padding: 0 3px;
 }
 
 .ad {

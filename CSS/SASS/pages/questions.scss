@@ -496,8 +496,12 @@ span.text {
 .eq-ans {
   display: flex;
   direction: ltr;
+  font-size: 18px;
+    @include minMobile {
+    font-size: 24px;
+  }
   i {
-    padding: 0 2px;
+    padding: 0 0px;
   }
   @include maxMobile {
     flex-basis: content !important;
@@ -507,11 +511,6 @@ span.text {
     justify-content: flex-end;
     align-items: center;
     flex-basis: content !important;
-  }
-  .kasir {
-    span {
-      font-size: 14px;
-    }
   }
 }
 .eq-sign {
@@ -1160,4 +1159,9 @@ sup {
     left: 0;
     transform: rotate(180deg);
   }
+}
+.i-b {
+  direction: ltr;
+  display: inline-block;
+  padding: 0 3px;
 }
