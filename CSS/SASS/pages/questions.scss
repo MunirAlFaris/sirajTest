@@ -259,6 +259,14 @@
         }
       }
     }
+    img {
+      width: 150px;
+      padding: 7px 0;
+      display: block;
+      @include minMobile {
+        width: 250px;
+      }
+    }
     .answers {
       display: flex;
       flex-direction: column;
@@ -1211,4 +1219,18 @@ sup {
   direction: ltr;
   display: inline-block;
   padding: 0 3px;
+}
+
+sub.ch {
+  margin-right: -16px;
+  padding-top: 6px;
+  @include minMobile {
+    margin-right: -20px;
+  }
+}
+.ch-long {
+  direction: ltr;
+  @include maxMobile {
+    font-size: 14px;
+  }
 }

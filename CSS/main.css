@@ -598,6 +598,16 @@ header.exam-header nav span {
     font-size: 16px;
   }
 }
+.q-cont .question img {
+  width: 150px;
+  padding: 7px 0;
+  display: block;
+}
+@media (min-width: 768px) {
+  .q-cont .question img {
+    width: 250px;
+  }
+}
 .q-cont .question .answers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1822,6 +1832,25 @@ sup {
   direction: ltr;
   display: inline-block;
   padding: 0 3px;
+}
+
+sub.ch {
+  margin-right: -16px;
+  padding-top: 6px;
+}
+@media (min-width: 768px) {
+  sub.ch {
+    margin-right: -20px;
+  }
+}
+
+.ch-long {
+  direction: ltr;
+}
+@media (max-width: 767px) {
+  .ch-long {
+    font-size: 14px;
+  }
 }
 
 .ad {

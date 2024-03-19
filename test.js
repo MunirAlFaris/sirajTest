@@ -61,7 +61,6 @@ function getQuestions() {
   request.send();
 }
 getQuestions();
-
 function createQ(obj, count) {
   for (let i = 0; i < count; i++) {
     //main div
