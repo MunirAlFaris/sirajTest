@@ -121,7 +121,7 @@ function createQ(obj, count) {
         title.appendChild(img22);
         break;
     }
-    for (let j = 1; j < 6; j++) {
+    for (let j = 1; j < 5; j++) {
       let mainDiv = document.createElement("div");
       let input = document.createElement("input");
       input.type = "radio";
