@@ -77,50 +77,6 @@ function createQ(obj, count) {
     answersBox.className = "answers";
     question.appendChild(answersBox);
     // input & label
-    switch (i) {
-      case 4:
-        let img5 = document.createElement("img");
-        img5.setAttribute = "src";
-        img5.src = "./q5.png";
-        title.appendChild(img5);
-        break;
-      case 7:
-        let img7 = document.createElement("img");
-        img7.setAttribute = "src";
-        img7.src = "./q8.png";
-        title.appendChild(img7);
-        break;
-      case 8:
-        let img8 = document.createElement("img");
-        img8.setAttribute = "src";
-        img8.src = "./q9.png";
-        title.appendChild(img8);
-        break;
-      case 9:
-        let img9 = document.createElement("img");
-        img9.setAttribute = "src";
-        img9.src = "./q10.png";
-        title.appendChild(img9);
-        break;
-      case 11:
-        let img11 = document.createElement("img");
-        img11.setAttribute = "src";
-        img11.src = "./q12.png";
-        title.appendChild(img11);
-        break;
-      case 15:
-        let img15 = document.createElement("img");
-        img15.setAttribute = "src";
-        img15.src = "./q16.png";
-        title.appendChild(img15);
-        break;
-      case 22:
-        let img22 = document.createElement("img");
-        img22.setAttribute = "src";
-        img22.src = "./q23.png";
-        title.appendChild(img22);
-        break;
-    }
     for (let j = 1; j < 5; j++) {
       let mainDiv = document.createElement("div");
       let input = document.createElement("input");
