@@ -77,7 +77,7 @@ function createQ(obj, count) {
     answersBox.className = "answers";
     question.appendChild(answersBox);
     // input & label
-    for (let j = 1; j < 4; j++) {
+    for (let j = 1; j < 5; j++) {
       let mainDiv = document.createElement("div");
       let input = document.createElement("input");
       input.type = "radio";
